@@ -1,0 +1,122 @@
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\nnatural}{\mathbb{N}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cM}{{\mathcal{M}}}
+\newcommand{\cN}{{\mathcal{N}}}
+\newcommand{\cIMN}{\mathcal{I}_{\mathcal{N}, \mathcal{M}}}
+\newcommand{\Fix}{\mathit{Fix}}
+
+\documentclass{beamer} 
+%\documentclass[a4paper, 11pt, xcolor=dvipsnames]{beamer} 
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{amsmath}
+\usepackage{graphics} 
+\usepackage{fancybox} 
+
+%\usepackage{helvet}
+%All font families are not available in every Beamer installation, but
+%typically, at least some of the following families will be available:
+%    serif          avant        bookman      chancery        charter
+%     euler         helvet       mathtime       mathptm       mathptmx
+%    newcent      palatino        pifont        utopia
+
+\mode<presentation> {
+\usetheme{Madrid} 
+}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+\usecolortheme[rgb={0.1,0.6,0.3}]{structure} 
+%\usecolortheme[named=RubineRed]{structure} 
+%\usecolortheme[named=CarnationPink]{structure}
+%\usecolortheme[rgb={0.1,0.6,0.3}]{structure} 
+\begin{document} 
+%\setbeamercovered{transparent=15} %Ukryte (np przez uncover beda polwidoczne)
+\setbeamercovered{dynamic}        %Ukryte (np przez uncover beda polwidoczne, im blizej tym mocniej)
+%%% to ponizej tez nie dziala...
+%\transglitter[direction=90]
+%%% to nizej mialo zmienic kolor bibliografii lecz niestety nie zadzialalo.
+%\setbeamercolor{bibliography item}{fg=black}
+%\setbeamercolor*{bibliography entry title}{fg=black}
+%-----------------------------------
+\title[Selektory i transwersale]{
+Selektory i transwersale
+} 
+%\subtitle{}
+\author{} 
+\date{\today}
+%---------------------
+\begin{frame} 
+  \titlepage 
+\end{frame} 
+%---------------------
+%\section[Outline of the talk]{}
+%\frame{\tableofcontents}
+%----------------------------------
+%\section{Introduction}
+\begin{frame}
+\uncover<1->{
+\begin{block}{Selektor versus transwersala}
+Selektor - wybór po jednym punkcie z rodziny rozłącznych zbiorów, formalnie:
+\end{block}
+}
+\uncover<2->{
+\begin{block}{Selektor} 
+  Rodzina $(A_i)$ ma być złożona ze zbiorów parami rozłącznych.
+  $A_i \cap A_j = \emptyset$ dla $i \not= j$,
+  $|S \cap A_i| = 1$ dla każdego $i$.
+\end{block}
+}
+\uncover<3->{
+\begin{block}{Transwersala}
+Rodzina $(A_i)$ dowolna.
+Transwersala to wybór $a_i \in A_i$ taki że
+$a_i \not= a_j$ dla $i \not= j$.
+\end{block}
+}
+\end{frame}
+
+\begin{frame}
+\uncover<1->{
+Twierdzenie (Halla, 1935): Rodzina $(A_i\colon i\in I)$ ma transwersalę
+wtedy i tylko wtedy gdy spełnia tak zwany 
+{\bf warunek Halla}, czyli gdy
+\[
+\forall_{\emptyset\not=J\subseteq I} |\bigcup_{j\in J} A_j| \geq |J|
+\]
+
+}
+\end{frame}
+
+\begin{frame}{Garść uwag}
+\uncover<1->{
+Dowód w jedną stronę (którą? :) ) jest oczywisty,
+w drugą stronę jest bardziej złożony.
+}
+\uncover<2->{
+Twierdzenie to ma mnóstwo równoważnych wersji,
+grafową, twierdzenie o łańcuchach i antyłańcuchach
+(=twierdzenie Dilwortha, etc.)
+}
+\uncover<3->{
+Jak szybko można znaleźć transwersalę?
+}
+\uncover<4->{
+Istnieje szybki (w miarę) algorytm do jej znajdowania
+}
+\end{frame}
+
+\begin{frame}
+Twierdzenie o wspólnych selektorach:
+Jeżeli $A_1,\ldots A_n$ i $B_1,\ldots, B_n$ są
+partycjami zbioru $X$ na zbiory tej samej mocy
+to istnieje wspólny selektor, więcej nawet:
+można podzielić $X$ na rozłączne wspólne selektory.
+\end{frame}
+
+\end{document}
+
