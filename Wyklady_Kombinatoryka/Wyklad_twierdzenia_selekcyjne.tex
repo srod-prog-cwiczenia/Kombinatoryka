@@ -165,6 +165,43 @@ common selectors.
 }
 \end{frame}
 
+\begin{frame}
+\uncover<1->{
+  \begin{block}{Definicja}
+{\small
+\setbeamercolor{postit}{fg=black,bg=cyan}
+\begin{beamercolorbox}[sep=1em]{postit}
+Rodzina Spernera - The Sperner family
+\end{beamercolorbox}
+}      
+To antyłańcuch w zbiorze $\langle P(X), \subseteq \rangle$.
+It is an antichain in the set $\langle P(X), \subseteq \rangle$.
+\end{block}
+}
+\uncover<2->{
+  \begin{block}{Twierdzenie Spernera - Sperner's theorem [1928][Emanuel Sperner]}
+    Each Sperner family has the size $\leq {n \choose \lfloor \frac{n}{2}
+      \rfloor}$.
+    \end{block}
+}
+\uncover<3->{
+  Nie należy mylić tego twierdzenia z tak zwanym Lematem Spernera
+  Don't confuse this theorem with so called ``Sperner's Lemma''.
+}
+\end{frame}
 
+\begin{frame}
+\uncover<1->{
+  \begin{block}{A proof?}
+    Sketch:
+    At first, we will prove the
+    {\bf Lubell - Yamamoto - Meshalkin inequality}:
+    \[
+\sum_{k=0}^n \frac{a_k}{{n \choose k}} \leq 1,
+\]
+where $a_k = |\lbrace A \in \mathcal{A}\colon |A| = k\rbrace$.
+    \end{block}
+}
+\end{frame}
 \end{document}
 
