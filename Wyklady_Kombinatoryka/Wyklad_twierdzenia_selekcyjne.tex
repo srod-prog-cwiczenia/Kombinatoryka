@@ -60,22 +60,33 @@ Selektory i transwersale
 %\section{Introduction}
 \begin{frame}
 \uncover<1->{
-\begin{block}{Selektor versus transwersala}
-Selektor - wybór po jednym punkcie z rodziny rozłącznych zbiorów, formalnie:
+\begin{block}{Selektor versus transwersala - Selector vs transversal}
+  Selektor - wybór po jednym punkcie z rodziny rozłącznych zbiorów, formalnie:
+  A selector - choose one by one points from a given family of pairwise
+  disjoint sets, more formally:
 \end{block}
 }
 \uncover<2->{
-\begin{block}{Selektor} 
+\begin{block}{Selektor - selector} 
   Rodzina $(A_i)$ ma być złożona ze zbiorów parami rozłącznych.
   $A_i \cap A_j = \emptyset$ dla $i \not= j$,
   $|S \cap A_i| = 1$ dla każdego $i$.
+
+  $(A_i)$ is a family of pairwise disjoint sets:
+  $A_i \cap A_j = \emptyset$ for $i \not= j$,
+  $|S \cap A_i| = 1$ for each $i$.
+  
 \end{block}
 }
 \uncover<3->{
-\begin{block}{Transwersala}
-Rodzina $(A_i)$ dowolna.
+\begin{block}{Transwersala - Transversal}
+  Rodzina $(A_i)$ dowolna.
+  Any family $(A_i)$.
 Transwersala to wybór $a_i \in A_i$ taki że
 $a_i \not= a_j$ dla $i \not= j$.
+Transversal is a sequence $(a_i)$ of
+pairwise different elements such
+that $a_i \in A_i$.
 \end{block}
 }
 \end{frame}
@@ -85,6 +96,9 @@ $a_i \not= a_j$ dla $i \not= j$.
 Twierdzenie (Halla, 1935): Rodzina $(A_i\colon i\in I)$ ma transwersalę
 wtedy i tylko wtedy gdy spełnia tak zwany 
 {\bf warunek Halla}, czyli gdy
+
+Theorem (Philip Hall, 1935): A family $(A_i \colon i \in I)$ has a
+transveral iff it fulfills the following condition:
 \[
 \forall_{\emptyset\not=J\subseteq I} |\bigcup_{j\in J} A_j| \geq |J|
 \]
@@ -111,12 +125,46 @@ Istnieje szybki (w miarę) algorytm do jej znajdowania
 \end{frame}
 
 \begin{frame}
-Twierdzenie o wspólnych selektorach:
+\uncover<1->{
+  Twierdzenie o wspólnych selektorach:
 Jeżeli $A_1,\ldots A_n$ i $B_1,\ldots, B_n$ są
 partycjami zbioru $X$ na zbiory tej samej mocy
 to istnieje wspólny selektor, więcej nawet:
 można podzielić $X$ na rozłączne wspólne selektory.
+}
+\uncover<2->{
+  Zastosowanie: Jeśli rozdamy $52$ karty na $13$
+  ,,lew'' (termin brydżowy, to grupa $4$ kart)
+  to z każdej lewy można wybrać po jednej karcie w taki
+  sposób że układ wybranych kart będzie tworzył
+  wzór: AKQJ10 98765432 (kolory kart nie mają znaczenia).
+  Dla pozostałych na stole kart można to powtórzyć, etc.
+}
 \end{frame}
+
+
+\begin{frame}
+\uncover<1->{
+  Theorem about common selectors:
+  Suppose that $A_1,\ldots A_n$ i $B_1,\ldots, B_n$ are
+  two partitions of the set $X$
+  into sets of the same size, then there
+  exists a common selector, moreover,
+  we can divide the set $X$ into pariwise disjoint
+common selectors.
+}
+
+\uncover<2->{
+  An application: Suppose that we deal the $52$
+  cards into $13$ groups (calles ``tricks'') of $4$ cards,
+  then we can take from each trick one card only
+  to obtain the pattern:
+  AKQJ10 98765432 (colours are irrelevant).
+  For the rest of the cards we can repeat this procedure, et
+  cetera.
+}
+\end{frame}
+
 
 \end{document}
 
