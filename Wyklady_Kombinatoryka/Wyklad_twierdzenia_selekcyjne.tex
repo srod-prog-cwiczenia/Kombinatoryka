@@ -44,7 +44,8 @@
 %\setbeamercolor*{bibliography entry title}{fg=black}
 %-----------------------------------
 \title[Selektory i transwersale]{
-Selektory i transwersale
+  Selektory i transwersale, twierdzenia minimaksowe,
+  Selectors and transversals, min-max theorems.
 } 
 %\subtitle{}
 \author{} 
@@ -106,7 +107,7 @@ transveral iff it fulfills the following condition:
 }
 \end{frame}
 
-\begin{frame}{Garść uwag}
+\begin{frame}{Garść uwag}{A few remarks}
 \uncover<1->{
 Dowód w jedną stronę (którą? :) ) jest oczywisty,
 w drugą stronę jest bardziej złożony.
@@ -164,6 +165,38 @@ common selectors.
   cetera.
 }
 \end{frame}
+
+\begin{frame}
+  \uncover<1->{
+  \begin{block}
+    The Dilworth's Theorem [1950].
+  \end{block}
+  }
+  \uncover<2->{
+  $\langle \mathbb{P}, \leq\rangle$
+  }
+  \uncover<3->{
+  \begin{block}{The Dilworth's Theorem}  
+    Maksymalny rozmiar {\bf antyłańcucha} = minimalnej liczbie {\bf łańcuchów}
+    które pokrywają zbiór $\mathbb{P}$.
+
+    Max size of an {\bf antichain} = min size of family of {\bf chains}
+    which covers the set $\mathbb{P}$.
+
+  \end{block}  
+  }
+  \uncover<4->{
+    \begin{block}{The dual Dilworth's Theorem
+        (sometimes called The Mirsky's Theorem}
+    Maksymalny rozmiar {\bf łańcucha} = minimalnej liczbie {\bf antyłańcuchów}
+    które pokrywają zbiór $\mathbb{P}$.
+
+    Max size of a {\bf chain} = min size of family of {\bf antichains}
+    which covers the set $\mathbb{P}$.
+
+    \end{block}
+  }
+  \end{frame}
 
 \begin{frame}
 \uncover<1->{
