@@ -168,12 +168,13 @@ common selectors.
 
 \begin{frame}
   \uncover<1->{
-  \begin{block}
-    The Dilworth's Theorem [1950].
+  \begin{block}{The Dilworth's Theorem [1950].}
   \end{block}
   }
   \uncover<2->{
-  $\langle \mathbb{P}, \leq\rangle$
+    Niech (suppose that) $\langle \mathbb{P}, \leq\rangle$
+    będzie {\bf zbiorem częściowo uporządkowanym} ({\bf a partially
+      ordered set})
   }
   \uncover<3->{
   \begin{block}{The Dilworth's Theorem}  
@@ -260,6 +261,44 @@ where $a_k = |\lbrace A \in \mathcal{A}\colon |A| = k\rbrace$.
 {\bf Wyliczenie:}
 $\frac{3}{{4 \choose 2}} + \frac{1}{{4 \choose 3}} = \frac{3}{4} \leq 1$.
 }
+\end{frame}
+
+\begin{frame}
+  \uncover<1->{
+    \begin{block}{Twierdzenie węgierskie (zwane też twierdzeniem K\"onig Egerv\'{a}ry)
+        (Hungarian theorem, called also sometimes K\"onig Egerv\'{a}ry Theorem)}
+      Garsteczka definicji:
+      ,,Szachownica'' (=macierz), niekoniecznie kwadratowa.
+      Zbiór zaznaczonych pól. (A chessboard - not necessary of square size,
+      and we ``tag'' some fields).
+      
+    \end{block}
+    \uncover<2->{
+      {\bf Linia} to linia pionowa lub pozioma (A {\bf line} is horizontal or vertical - as
+      you want).
+    }
+    \uncover<3->{
+      Zbiór pól jest {\bf rozproszony} gdy nie ma wśród nich
+      dwóch punktów leżących na tej samej linii.
+      A collection of some fields is called {\bf scattered} iff
+      there is no two fields lying on the same line.
+    }
+  }  
+\end{frame}
+
+\begin{frame}
+    \begin{block}{Twierdzenie węgierskie (zwane też twierdzeniem K\"onig Egerv\'{a}ry)
+        (Hungarian theorem, called also sometimes K\"onig Egerv\'{a}ry Theorem)}
+
+      Dla dowolnego zaznaczenia pól na szachownicy,
+      maksymalna liczność zbioru rozproszonych zaznaczonych pól
+      jest równa minimalnej liczności zbioru linii pokrywajacych
+      zaznaczone pola.
+      (The min size of tagged scattered fields =
+      the max size of set of lines covering the set
+      of all tagged fields).
+    \end{block}
+
 \end{frame}
 
 \end{document}
