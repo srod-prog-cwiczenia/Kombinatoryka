@@ -214,7 +214,7 @@ It is an antichain in the set $\langle P(X), \subseteq \rangle$.
 }
 \uncover<2->{
   \begin{block}{Twierdzenie Spernera - Sperner's theorem [1928][Emanuel Sperner]}
-    Each Sperner family has the size $\leq {n \choose \lfloor \frac{n}{2}
+    Each Sperner family has the size $\leq \binom{n}{\lfloor \frac{n}{2}
       \rfloor}$.
     \end{block}
 }
@@ -229,7 +229,7 @@ It is an antichain in the set $\langle P(X), \subseteq \rangle$.
   \begin{block}{A proof?}
     Sketch:
     At first, we will prove the
-    {\bf Lubell - Yamamoto - Meshalkin inequality}:
+    {\bf Lubell[1966] - Yamamoto[1954] - Meshalkin[1963], also Bollob\'as[1965] inequality}:
     \[
 \sum_{k=0}^n \frac{a_k}{{n \choose k}} \leq 1,
 \]
@@ -320,19 +320,64 @@ Dilworth's theorem $\implies$ The hungarian Theorem $\implies$ The Hall's Theore
 
 
 \begin{frame}
-Podział liczby n na k składników to przedstawienie n
+  \uncover<1->{
+    \begin{block}{Liczby podziałowe (The partition numbers)}
+    \end{block}  
+  }
+\uncover<2->{
+  {\bf Podział} liczby $n$ na $k$ składników to przedstawienie $n$
  w postaci sumy
-$a_0 + \dots a_{k-1} = n$,
+$a_0 + \dots + a_{k-1} = n$,
 gdzie $1 \leq a_0 \leq a_1 \leq \ldots a_{k-1} \leq n$
 Liczbę podziałów $n$ na $k$ składników oznaczamy przez $P(n,k)$.
-
-Przykład: 
-$P(7, 4) = 3$, bo mamy:
+{\bf Ważne!} Nie liczy się kolejność i nie dopuszczamy tutaj zera.
+}
+\uncover<3->{
+  A {\bf partition} of a given numer $n$ into $k$ parts
+  is a representation of the number $n$ into the following sum:
+$a_0 + \dots + a_{k-1} = n$,
+where $1 \leq a_0 \leq a_1 \leq \ldots a_{k-1} \leq n$
+The number of all partitions of $n$ into $k$ parts we denote by $P(n,k)$.
+{\bf Please notice!} The order of these numbers is not important, also the
+zero value is forbidden.
+}
+\uncover<4->{
+Przykład (Example(: 
+$P(7, 4) = 3$, bo mamy (since we have):
 \begin{tabbing}
 $7 = 1 + 1 + 1 + 4$ \\
 $7 = 1 + 1 + 2 + 3$ \\
 $7 = 1 + 2 + 2 + 2$ \\
 \end{tabbing}
+}
+\end{frame}
+
+\begin{frame}
+  \uncover<1->{
+    {\bf Liczbą podziałową} nazywamy liczbę wszystkich możliwych podziałów
+    liczby $n$ na dodatnie składniki, oznaczamy ją przez $p(n)$.
+  }
+  \uncover<2->{
+    {\bf The partition number} We consider {\it all} possible partitions of
+    $n$ into nonzero parts. The number of all these partitions we denote by $p(n)$.
+  }
+  \uncover<3->{
+    {\bf (Przykład) Example: }
+    $p(6) = 11$, bo (since):
+\begin{tabbing}
+  $6 = 6$\\
+  $6 = 5 + 1$\\
+  $6 = 4 + 2$\\
+  $6 = 4 + 1 + 1$\\
+  $6 = 3 + 3$\\
+  $6 = 3 + 2 + 1$\\
+  $6 = 3 + 1 + 1 + 1$\\
+  $6 = 2 + 2 + 2$\\
+  $6 = 2 + 2 + 1 + 1$\\
+  $6 = 2 + 1 + 1 + 1 + 1$\\
+  $6 = 1 + 1 + 1 + 1 + 1 + 1$\\
+\end{tabbing}  
+  }
 \end{frame}
 
 \begin{frame}
