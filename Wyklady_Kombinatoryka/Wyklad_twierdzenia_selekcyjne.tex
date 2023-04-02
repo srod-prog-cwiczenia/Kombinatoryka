@@ -16,6 +16,7 @@
 \usepackage{amsmath}
 \usepackage{graphics} 
 \usepackage{fancybox} 
+\usepackage{makecell}
 
 %\usepackage{helvet}
 %All font families are not available in every Beamer installation, but
@@ -386,14 +387,35 @@ $7 = 1 + 2 + 2 + 2$ \\
 \begin{table}
   \centering
     \begin{tabular}{| c | c | c |}
-    n pudełek, k obiektów   & Pudełka rozróżnialne & Pudełka NIErozróżnialne \\
+    n pudełek, k obiektów   & \thead{Pudełka rozróżnialne} & \thead{Pudełka \\ NIErozróżnialne} \\
     \hline
     Obiekty rozróżnialne & $n^k$  &  $\sum_{j = 1}^n S(k, j)$\\
     \hline
-    Obiekty NIErozróżnialne  & ${n + k - 1 \choose k}$ &  $\sum_{j = 1}^n P(k, j)$ \\
+    Obiekty NIErozróżnialne  & $\binom{n + k - 1}{k}$ &  $\sum_{j = 1}^n P(k, j)$ \\
     \hline
     \end{tabular}
-  \caption{Tabela liczności}
+  \caption{Rozmieszczenia bez ograniczeń}
+   \end{table}
+\end{block}
+}
+\end{frame}
+
+\begin{frame}
+\uncover<1->{
+\begin{block}{,,Pudełkologia - c.d.'' (Carton-ology - continued :) ):}
+\begin{table}
+  \centering
+    \begin{tabular}{| c | c | c |}
+    \hline
+      \thead{n pudełek, k obiektów \\ założenie: $k \leq n$}   & \thead{Pudełka rozróżnialne} & \thead{Pudełka \\ NIErozróżnialne} \\
+    \hline
+    Obiekty rozróżnialne & \makecell{\small $[n]_k$ \\ $=n \cdot (n-1) \cdot \ldots \cdot (n - k + 1)$ \\
+      $\frac{n!}{(n-k)!}$}  &  $1$\\
+    \hline
+    Obiekty NIErozróżnialne  & $\binom{n}{k}$ &  $1$ \\
+    \hline
+    \end{tabular}
+  \caption{W każdym pudełku może być co najwyżej {\bf JEDEN} obiekt}
    \end{table}
 \end{block}
 }
