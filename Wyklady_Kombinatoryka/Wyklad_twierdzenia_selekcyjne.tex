@@ -7,6 +7,7 @@
 \newcommand{\cN}{{\mathcal{N}}}
 \newcommand{\cIMN}{\mathcal{I}_{\mathcal{N}, \mathcal{M}}}
 \newcommand{\Fix}{\mathit{Fix}}
+\newcommand{\stirlingii}{\genfrac{\{}{\}}{0pt}{}}
 
 \documentclass{beamer} 
 %\documentclass[a4paper, 11pt, xcolor=dvipsnames]{beamer} 
@@ -389,7 +390,7 @@ $7 = 1 + 2 + 2 + 2$ \\
     \begin{tabular}{| c | c | c |}
     n pudełek, k obiektów   & \thead{Pudełka rozróżnialne} & \thead{Pudełka \\ NIErozróżnialne} \\
     \hline
-    Obiekty rozróżnialne & $n^k$  &  $\sum_{j = 1}^n S(k, j)$\\
+    Obiekty rozróżnialne & $n^k$  &  $\sum_{j = 1}^n \stirlingii{k}{j}$\\
     \hline
     Obiekty NIErozróżnialne  & $\binom{n + k - 1}{k}$ &  $\sum_{j = 1}^n P(k, j)$ \\
     \hline
@@ -420,6 +421,27 @@ $7 = 1 + 2 + 2 + 2$ \\
 \end{block}
 }
 \end{frame}
+
+\begin{frame}
+\uncover<1->{
+\begin{block}{,,Pudełkologia - c.d.'' (Carton-ology - continued :) ):}
+\begin{table}
+  \centering
+    \begin{tabular}{| c | c | c |}
+    \hline
+      \thead{n pudełek, k obiektów \\ założenie: $n \leq k$}   & \thead{Pudełka rozróżnialne} & \thead{Pudełka \\ NIErozróżnialne} \\
+    \hline
+    Obiekty rozróżnialne & \makecell{\small $s(k, n)$ \\ ... \\ ... }  &  \makecell{\small $\stirlingii{k}{n}$}\\
+    \hline
+    Obiekty NIErozróżnialne  & ... &  ... \\
+    \hline
+    \end{tabular}
+  \caption{W każdym pudełku MUSI być co najmniej jeden obiekt}
+   \end{table}
+\end{block}
+}
+\end{frame}
+
 
 \end{document}
 
