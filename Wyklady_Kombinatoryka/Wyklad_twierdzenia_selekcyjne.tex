@@ -319,6 +319,47 @@ Dilworth's theorem $\implies$ The hungarian Theorem $\implies$ The Hall's Theore
   
 \end{frame}
 
+\begin{frame}
+\begin{block}{Dowód tw Halla za pomocą tw Dilwortha}
+\end{block}
+\uncover<1->{
+Niech $(A_i)_{i \in I}$ będzie rodziną zbiorów spełniającą
+warunek Halla. Oznaczmy: $X = \bigcup_{i\in I} A_i$
+i niech $n = |X|$.}
+\uncover<2->{
+Definiujemy:
+$\mathbb{P}$ to $I \cup X$ 
+a relacja $\leq$ zachodzi między dwoma elementami 
+$I$ wtedy i tylko wtedy gdy są one równe, 
+podobnie, zachodzi  między dwoma elementami
+zbioru $X$ wtedy i tylko wtedy gdy są one sobie równe, 
+ponadto zachodzi tylko między $x \in X$ i $i \in I$ gdy
+$x \in A_i$.
+}
+\uncover<3->{
+Sprawdzimy że maksymalna moc antyłańcucha w zbiorze
+$\langle \mathbb{P}, \leq \rangle$ to $n$.
+Niech zatem $A \subseteq I \cup X$ będzie antyłańcuchem.
+Z warunku Halla otrzymujemy że 
+$|\bigcup_{i \in I\cap A} A_i| \geq |I \cap X|$.
+Ponieważ $A$ jest antyłańcuchem więc łatwo
+jest zauważyć że $\bigcup_{i \in I\cap A} A_i \cap A = \emptyset$,
+zatem $|A| = |A \cap X| + |I \cap A| \leq (n -  |\bigcup_{i \in I\cap A} A_i|) + |I \cap A| \leq (n - |I \cap A|) + |I \cap A| = n$.
+}
+\uncover<4->{
+Na mocy tw. Dilwortha zbiór $\langle \mathbb{P}, \leq \rangle$ można ,,przykryć'' $n$ łańcuchami:
+$I \cup X = \bigcup_{j = 1}^n L_j$.
+Bez zmniejszenia ogólności możemy zakładać że powyższe łańcuchy są parami rozłączne.
+Dla każdego $i \in I$ wybieramy (jedyny) łańcuch $L_{j_i}$ taki że $i \in L_{j_i}$ 
+i temu $i$ przyporządkowujemy (znów jedyny) $x \in X \cap L_{j_i}$.
+}
+\uncover<5->{
+Wówczas tak określona funkcja jest SDR.
+}
+\end{frame}
+
+
+
 
 
 \begin{frame}
@@ -431,9 +472,9 @@ $7 = 1 + 2 + 2 + 2$ \\
     \hline
       \thead{n pudełek, k obiektów \\ założenie: $n \leq k$}   & \thead{Pudełka rozróżnialne} & \thead{Pudełka \\ NIErozróżnialne} \\
     \hline
-    Obiekty rozróżnialne & \makecell{\small $s(k, n)$ \\ ... \\ ... }  &  \makecell{\small $\stirlingii{k}{n}$}\\
+    Obiekty rozróżnialne & \makecell{\small $s(k, n)$ \\ (czyli liczba surjekcji \\ ze zbioru $k-$ele. na $n-$ ele. }  &  \makecell{\small $\stirlingii{k}{n}$}\\
     \hline
-    Obiekty NIErozróżnialne  & ... &  ... \\
+    Obiekty NIErozróżnialne  & $\binom{ k - 1}{k - n}$ &  P(k, n) \\
     \hline
     \end{tabular}
   \caption{W każdym pudełku MUSI być co najmniej jeden obiekt}
