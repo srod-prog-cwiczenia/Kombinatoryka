@@ -472,7 +472,7 @@ $7 = 1 + 2 + 2 + 2$ \\
     \hline
       \thead{n pudełek, k obiektów \\ założenie: $n \leq k$}   & \thead{Pudełka rozróżnialne} & \thead{Pudełka \\ NIErozróżnialne} \\
     \hline
-    Obiekty rozróżnialne & \makecell{\small $s(k, n)$ \\ (czyli liczba surjekcji \\ ze zbioru $k-$ele. na $n-$ ele. }  &  \makecell{\small $\stirlingii{k}{n}$}\\
+    Obiekty rozróżnialne & \makecell{\small $s(k, n)$ \\ (czyli liczba surjekcji \\ ze zbioru $k-$ele. na $n-$ ele.) }  &  \makecell{\small $\stirlingii{k}{n}$}\\
     \hline
     Obiekty NIErozróżnialne  & $\binom{ k - 1}{k - n}$ &  P(k, n) \\
     \hline
@@ -481,6 +481,22 @@ $7 = 1 + 2 + 2 + 2$ \\
    \end{table}
 \end{block}
 }
+\end{frame}
+
+\begin{frame}
+\begin{block}{Uzupełnienie o wzory:}
+\end{block}
+Liczba surjekcji ze zbioru $n$-elementowego $X$
+na zbiór $m$-elementowy (przy czym oczywiście
+zakładamy że $m \leq n$ wynosi
+(A formula for the number of all surjections from the $n$-size
+set $X$ onto the $m$-size set $Y$):
+\[s(n,m) = \sum_{k = 0}^m (-1)^k \binom{m}{k} (m - k)^n
+\]
+
+We have also: \[
+\stirlingii{n}{m} = \frac{s(n,m)}{m}
+\]
 \end{frame}
 
 
