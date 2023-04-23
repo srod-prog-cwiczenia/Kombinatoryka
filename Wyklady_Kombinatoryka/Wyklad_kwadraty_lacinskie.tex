@@ -1,0 +1,113 @@
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\nnatural}{\mathbb{N}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cM}{{\mathcal{M}}}
+\newcommand{\cN}{{\mathcal{N}}}
+\newcommand{\cIMN}{\mathcal{I}_{\mathcal{N}, \mathcal{M}}}
+\newcommand{\Fix}{\mathit{Fix}}
+\newcommand{\stirlingii}{\genfrac{\{}{\}}{0pt}{}}
+
+\documentclass{beamer} 
+%\documentclass[a4paper, 11pt, xcolor=dvipsnames]{beamer} 
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{amsmath}
+\usepackage{graphics} 
+\usepackage{fancybox} 
+\usepackage{makecell}
+
+%\usepackage{helvet}
+%All font families are not available in every Beamer installation, but
+%typically, at least some of the following families will be available:
+%    serif          avant        bookman      chancery        charter
+%     euler         helvet       mathtime       mathptm       mathptmx
+%    newcent      palatino        pifont        utopia
+
+\mode<presentation> {
+\usetheme{Madrid} 
+}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+\usecolortheme[rgb={0.1,0.6,0.3}]{structure} 
+%\usecolortheme[named=RubineRed]{structure} 
+%\usecolortheme[named=CarnationPink]{structure}
+%\usecolortheme[rgb={0.1,0.6,0.3}]{structure} 
+\begin{document} 
+%\setbeamercovered{transparent=15} %Ukryte (np przez uncover beda polwidoczne)
+\setbeamercovered{dynamic}        %Ukryte (np przez uncover beda polwidoczne, im blizej tym mocniej)
+%%% to ponizej tez nie dziala...
+%\transglitter[direction=90]
+%%% to nizej mialo zmienic kolor bibliografii lecz niestety nie zadzialalo.
+%\setbeamercolor{bibliography item}{fg=black}
+%\setbeamercolor*{bibliography entry title}{fg=black}
+%-----------------------------------
+\title[Kwadraty łacińskie]{
+  Kwadraty łacińskie i zagadnienia pokrewne.
+} 
+%\subtitle{}
+\author{} 
+\date{\today}
+%---------------------
+\begin{frame} 
+  \titlepage 
+\end{frame} 
+%---------------------
+%\section[Outline of the talk]{}
+%\frame{\tableofcontents}
+%----------------------------------
+%\section{Introduction}
+\begin{frame}
+\uncover<1->{
+\begin{block}{Prostokąt łaciński}
+  To macierz która posiada elementy parami różne
+  we wszystkich wierszach i kolumnach.
+  Jeśli prostokąt łaciński jest macierzą
+kwadratową to nazywamy ją {\bf Kwadratem łacińskim}
+\end{block}
+}
+\uncover<2->{
+\begin{block}{The latin rectangles}
+  
+  A matrix such that has pairwise different
+  elements in each column and in each row.
+  If the latin rectangle is a square matrix
+  then we call it {\bf a latin square}.
+  
+\end{block}
+}
+\uncover<3->{
+  We usually assume that we build a latin square
+  of size $n \times n$ with an elements
+  from the set $\lbrace 1, \ldots , n\rbrace$
+  {\bf or better }, underline{a latin}
+  letters $a, b, \ldots $.
+}
+\end{frame}
+
+\begin{frame}
+  Examples:
+  $\begin{bmatrix}
+    a & b & c & d\\
+    b & d & a & c\\
+    d & c & b & a\\
+    c & a & d & b\\
+    \end{bmatrix}$
+  
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Kwadraty {\bf grecko-łacińskie} (zwane też {\bf kwadratami Eulera}
+      - historia}
+  \end{block}
+
+  \begin{itemize}
+    \end{itemize}
+  
+  \end{frame}
+
+\end{document}
+
