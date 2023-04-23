@@ -32,10 +32,12 @@
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 
-\usecolortheme[rgb={0.1,0.6,0.3}]{structure} 
+%%% to co nizej to byl standardowy temat:
+%\usecolortheme[rgb={0.1,0.6,0.3}]{structure}
+%%% na razie taki :-)
+\usecolortheme[named=violet]{structure}
 %\usecolortheme[named=RubineRed]{structure} 
 %\usecolortheme[named=CarnationPink]{structure}
-%\usecolortheme[rgb={0.1,0.6,0.3}]{structure} 
 \begin{document} 
 %\setbeamercovered{transparent=15} %Ukryte (np przez uncover beda polwidoczne)
 \setbeamercovered{dynamic}        %Ukryte (np przez uncover beda polwidoczne, im blizej tym mocniej)
@@ -105,9 +107,17 @@ kwadratową to nazywamy ją {\bf Kwadratem łacińskim}
   \end{block}
 
   \begin{itemize}
+  \item<1->
+    {\color{blue} Problem 36 oficerów}:
+    L.Euler [1782]: Nie istnieje kwadrat grecko-łaciński $6\times 6$
+  \item<2->G.Tarry [1900] Potwierdzona
+  \item<3-> Euler sądził że istnieje kwadrat grecko-łaciński wtedy
+    i tylko wtedy gdy $n - 2$ jest podzielne przez $4$.
+  \item<4-> R.C.Bose, S. S. Shrikhande, E.T.Parker [1960]:
+    Dla wszystkich $n$ poza $2$ i $6$ istnieje kwadrat
+    grecko-łaciński.
     \end{itemize}
-  
-  \end{frame}
+\end{frame}
 
 \end{document}
 
