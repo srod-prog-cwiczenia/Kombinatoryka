@@ -65,8 +65,41 @@
 \begin{frame}
 \uncover<1->{
 \begin{block}{The Ramsey Theorem}
+  Notation:
+  Suppose that $X$ is a set. Denote:
+  $[X]^r = \lbrace A \subseteq X\colon |A| = r\rbrace$
+  Suppose that $m$ is a natural number. Denote:
+  $[m]^r = [\lbrace 0, 1, \ldots, m-1\rbrace]^r$.
 \end{block}
 }
+\uncover<2->{
+  \begin{block}{The formulation (Frank Ramsey, [1930]):}
+    For each natural numbers $k, r, n$ there exists
+    a number $m$ such that for any function
+    $c\colon [m]^r \to \lbrace 1, \ldots k\rbrace$
+    there exists a set $A \subseteq \lbrace 0, \ldots, m - 1\rbrace$
+    of size $n$ such that the function $c$ has a one value only
+    on the whole set $[A]^r$.
+    \end{block}
+}
+\uncover<3->{
+  The minimal $m$ with this property we called a {\bf Ramsey number}
+  and we denote it by $R_k(n; r)$.
+}
+\uncover<4->{
+  Historical remarks: The idea of this theorem
+  firslty appeared in the article by Frank Ramsey in 1930:
+  \beamertemplatebookbibitems
+\begin{thebibliography}{100}{
+\bibitem{R}
+  {\sc F.P.Ramsey}, 
+  {\em On a problem of formal logic}
+  London Mathematical Society (1930) Vol s2-30, Issue 1, 264-286.
+}
+\end{thebibliography}
+
+}
+
 \end{frame}
 
 \end{document}
