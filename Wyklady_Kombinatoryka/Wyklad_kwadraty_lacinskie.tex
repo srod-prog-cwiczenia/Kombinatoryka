@@ -85,7 +85,7 @@ kwadratową to nazywamy ją {\bf Kwadratem łacińskim}
   We usually assume that we build a latin square
   of size $n \times n$ with an elements
   from the set $\lbrace 1, \ldots , n\rbrace$
-  {\bf or better }, underline{a latin}
+  {\bf or better }, \underline{a latin}
   letters $a, b, \ldots $.
 }
 \end{frame}
@@ -98,26 +98,55 @@ kwadratową to nazywamy ją {\bf Kwadratem łacińskim}
     d & c & b & a\\
     c & a & d & b\\
     \end{bmatrix}$
-  
+
+
 \end{frame}
 
 \begin{frame}
-  \begin{block}{Kwadraty {\bf grecko-łacińskie} (zwane też {\bf kwadratami Eulera}
-      - historia}
+  \uncover<1->{
+  \begin{block}{Theorem}:
+    Each $n \times m$ latin rectangle ($n < m$) can be
+    completed to a $(n + 1) \times m$ latin rectangle.
+  \end{block}
+  }
+  {\bf Proof:} Use the Hall's theorem.
+  \uncover<2->{
+    \begin{block}{Corollary}
+      Each $n \times m$ latin rectangle ($n < m$)
+      can be completed to a full latin square.
+      \end{block}
+  }
+  \end{frame}
+
+\begin{frame}
+  \begin{block}{Kwadraty {\bf grecko-łacińskie (Graeco-Latin squares)}
+      (zwane też {\bf kwadratami Eulera}
+      - historia (called also the {\bf Euler squares} - the history of them in a nutshell}
   \end{block}
 
   \begin{itemize}
   \item<1->
-    {\color{blue} Problem 36 oficerów}:
+    {\color{blue} Problem 36 oficerów (36 officers problem)}:
     L.Euler [1782]: Nie istnieje kwadrat grecko-łaciński $6\times 6$
-  \item<2->G.Tarry [1900] Potwierdzona
+      (There is no a Graeco-Latin square of size $6 \times 6$).
+  \item<2->G.Tarry [1900] Potwierdzona (Verified (of course, without computer
+    support \includegraphics[height=3mm]{smile.png})).
   \item<3-> Euler sądził że istnieje kwadrat grecko-łaciński wtedy
     i tylko wtedy gdy $n - 2$ jest podzielne przez $4$.
+
+    Euler speculated that Graeco-Latin squares exists if and
+    only if $n \equiv 2 (\pmod 4)$.
   \item<4-> R.C.Bose, S. S. Shrikhande, E.T.Parker [1960]:
     Dla wszystkich $n$ poza $2$ i $6$ istnieje kwadrat
-    grecko-łaciński.
+    grecko-łaciński.( For each $n \not= 2,6$ there exists a
+    Graeco-Latin square.)
     \end{itemize}
 \end{frame}
+
+\begin{frame}
+\begin{center}\includegraphics{36_oficerow.png}\end{center}
+  
+  \end{frame}
 
 \end{document}
 
