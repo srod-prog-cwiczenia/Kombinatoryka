@@ -101,14 +101,14 @@
 }
 \end{frame}
 
-%\begin{frame} %TODO z jakis powodow nie chce to funkcjonowac w otoczeniu frame
+\begin{frame}[fragile] %opcja fragile jest jak się okazuje tu nieodzowna bo używamy listingu programu (tak samo w przypadku verbatim, etc.)
 \begin{lstlisting}[language=Python]
 reszty_kwadratowe = set({})
 for n in range(1, 17):
 	reszty_kwadratowe.add((n * n) % 17)
 print(reszty_kwadratowe)
 \end{lstlisting}
-%\end{frame}
+\end{frame}
 
 \end{document}
 
