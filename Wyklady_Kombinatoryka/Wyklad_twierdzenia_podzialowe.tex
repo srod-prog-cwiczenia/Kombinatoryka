@@ -102,12 +102,66 @@
 \end{frame}
 
 \begin{frame}[fragile] %opcja fragile jest jak się okazuje tu nieodzowna bo używamy listingu programu (tak samo w przypadku verbatim, etc.)
+  \uncover<1->{{\small
+      \setbeamercolor{postit}{fg=black,bg=yellow}
+      \begin{beamercolorbox}[sep=1em]{postit}
+        The notion of {\bf quadratic residue} is crucial
+        for the construction of an example of a graph which shows
+        that $R(4,4) \geq 18$:
+      \end{beamercolorbox}
+  }}
+  
 \begin{lstlisting}[language=Python]
 reszty_kwadratowe = set({})
 for n in range(1, 17):
 	reszty_kwadratowe.add((n * n) % 17)
 print(reszty_kwadratowe)
 \end{lstlisting}
+
+\end{frame}
+
+\begin{frame}
+  \begin{block}{
+    Notacja ,,strzałkowa'' Erd\"osa i Rado
+    (An ``arrow notation of Erd\"os and Rado):}
+  \end{block}
+  \uncover<1->{
+    $n \to (m_1, \ldots, m_k)^r$ if and only if
+    for each partition: $[n]^r = A_1 \cup \ldots \cup A_k$
+    there exists a ``color'' $1 \leq j \leq k$
+    and a set $M \subseteq [n]$ of size $\geq m_j$ such
+    that $[M]^r \subseteq A_j$.
+  }
+  \uncover<2->{
+We abbreviate: $n \to (\underbrace{l,l,\ldots, l}_{\text{k $\times$}})^r$ as simply $n \to (l)^r_k$. 
+  }
+\end{frame}
+
+\begin{frame}
+  \begin{block}{
+    We know only seven (sic! \includegraphics[height=5mm]{krzyczacy.jpeg})
+    van der Waerden numbers.}
+   \end{block}
+
+\begin{table}
+  \centering
+  \begin{tabular}{| c | c c c |}
+    \hline 
+     length$\backslash$ colors: & 2 & 3 & 4 \\
+    \hline
+    3 & 9 & 27 & 76 \\
+    \hline
+    4 & 35 & 293 &  \\
+    \hline
+    5 & 178 &  &  \\
+    \hline
+    6 & 1132 & & \\
+    \hline
+    \end{tabular}
+  \caption{All known van der Waerden numbers}
+\end{table}
+
+
 \end{frame}
 
 \end{document}
