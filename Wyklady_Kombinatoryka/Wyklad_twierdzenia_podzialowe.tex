@@ -19,6 +19,7 @@
 \usepackage{fancybox} 
 \usepackage{makecell}
 \usepackage{listings}
+\usepackage{mathtools}
 
 %\usepackage{helvet}
 %All font families are not available in every Beamer installation, but
@@ -36,7 +37,12 @@
 %%% to co nizej to byl standardowy temat:
 %\usecolortheme[rgb={0.1,0.6,0.3}]{structure}
 %%% na razie taki :-)
+
+%%% to colotheme od Ani:
+%\usecolortheme[rgb={0.5,0.3.0.9}]{structure}
+
 \usecolortheme[named=violet]{structure}
+
 %\usecolortheme[named=RubineRed]{structure} 
 %\usecolortheme[named=CarnationPink]{structure}
 \begin{document} 
@@ -160,9 +166,55 @@ We abbreviate: $n \to (\underbrace{l,l,\ldots, l}_{\text{k $\times$}})^r$ as sim
     \end{tabular}
   \caption{All known van der Waerden numbers}
 \end{table}
-
-
 \end{frame}
+
+\begin{frame}
+  \begin{block}{The Hales-Jewett theorem (1963)}
+    
+  \end{block}
+
+\uncover<1->{
+\begin{block}{}
+{\small
+\setbeamercolor{postit}{fg=black,bg=cyan}
+\begin{beamercolorbox}[sep=1em]{postit}
+  Garść oznaczeń (A handful of notations):
+\end{beamercolorbox}
+}      
+Suppose that $n$, $d$ are any natural numbers.
+By $\prescript{d}{}{[n]}$ we denote the
+collection of all finite sequences of a size
+$k$ of elements from the set
+$[n]$ (recall: $[n] = \lbrace 0, 1, \ldots, n-1\rbrace$).
+Notice: This is an $d$ - dimensional {\bf cube} of size $n$ (elements).
+
+A {\bf line} is a subcollection of $\prescript{d}{}{[n]}$ 
+of the following form:
+$\lbrace (a_j^{(1)}, a_j^{(2)}, \ldots, a_j^{(d)}) \colon j = 0, 1 ,\ldots n-1\rbrace$
+where all the sequence $(a_j^{(i)})_{j=0,1\ldots, n-1}$
+is either a constant number (from $[n]$) or an identity sequence (namely
+$(0,1,\ldots,n-1)$ and, moreover, not all sequences are constant.
+\end{block}
+}
+\end{frame} 
+
+\begin{frame}
+\begin{block}{}
+{\small
+\setbeamercolor{postit}{fg=black,bg=cyan}
+\begin{beamercolorbox}[sep=1em]{postit}
+  Theorem [Hales-Jewett, (1963)]:
+\end{beamercolorbox}
+}      
+\end{block}
+For each $k, n$ there exists a number $d$ such that if
+we color the cube $\prescript{d}{}{[n]}$ by $k$ colors
+then there exists at least one monochromatic line.
+The lowest such a number $d$ we denote by
+$HJ(n, k)$.
+\end{frame}
+
+
 
 \end{document}
 
