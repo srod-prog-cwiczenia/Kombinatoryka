@@ -214,7 +214,84 @@ The lowest such a number $d$ we denote by
 $HJ(n, k)$.
 \end{frame}
 
+\begin{frame}
+\uncover<1->{
+\begin{block}{}
+{\small
+\setbeamercolor{postit}{fg=black,bg=cyan}
+\begin{beamercolorbox}[sep=1em]{postit}
+  Niewiele wiadomo o konkretnych liczbach Halesa-Jewetta:
+\end{beamercolorbox}
+}      
+\end{block}
+}
+,,Trywialne'' wartości to np. $HJ(2, k) = k$.
+            [N.Hindman, E.Tressler, 2014]: $HJ(3,2) = 4$.
+            A już np wiadomo tylko że $HJ(4, 2) \leq 10^{11}$.
+            
+\end{frame}
 
+\begin{frame}
+\uncover<1->{
+\begin{block}{}
+{\small
+\setbeamercolor{postit}{fg=black,bg=cyan}
+\begin{beamercolorbox}[sep=1em]{postit}
+  Twierdzenie Schura:
+\end{beamercolorbox}
+}      
+\end{block}
+}
+\uncover<2->{
+For each number of colors: $k$ one can find such a great natural number
+$N$ such that if we color all natural numbers from
+$1$ to $N$ by $k$ colors, then there exists a monochromatic
+triple of the form: $n, m, n + m$ (all $\leq N$ of course).
+The lowest $N$ with this property we call {\bf The Schur's numbers}
+and we denote by $S(k)$.
+}
+\uncover<3->{
+  We should be ashamed of our lack of knowledge of
+  the Schur's number, since we know only that:
+}
+\uncover<4->{
+\begin{table}
+  \centering
+  \begin{tabular}{| c | c |}
+    \hline 
+      k & S(k) \\
+    \hline
+      1 & 2 \\
+    \hline
+      2 & 5  \\
+    \hline
+      3 & 14 \\
+    \hline
+      4 & 45 \\
+      \hline
+      5 & 161 \\
+      \hline
+    \end{tabular}
+  \caption{All known Schur's numbers}
+\end{table}
+}
+\end{frame}
+
+\begin{frame}
+\uncover<1->{
+  \begin{block}{Zależności:}
+    {\small
+      \setbeamercolor{postit}{fg=black,bg=cyan}
+      \begin{beamercolorbox}[sep=1em]{postit}
+        Mamy następujące wynikania:
+      \end{beamercolorbox}
+    }
+    Hales-Jewett's Theorem $\implies$ Gallai Theorem $\implies$ Van der Waerden Theorem
+    
+    Ramsey Theorem $\implies$ Schur's Theorem
+  \end{block}
+}
+\end{frame}
 
 \end{document}
 
