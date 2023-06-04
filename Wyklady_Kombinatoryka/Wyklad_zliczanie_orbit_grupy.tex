@@ -99,7 +99,43 @@ Na ile ,,istotnie różnych'' sposobów możemy to uczynić?
     is here:)
     $|\Omega| = \frac{1}{|G|} \sum_{g\in G} |fix(g)|$
   \end{block}
+  \begin{block}{Historical remarks}
+    This lemma is sometimes called ''The lemma that is not Burnside's''
+    or Cauchy ([1845], Frobenius [1887] lemma).
+    \end{block}
 \end{frame}
+
+\begin{frame}
+  W przypadku pokolorowania $n$ kolorami ,,szachownicy'' $2\times 2$
+  dostajemy za pomocą Lematu Burnside'a wzór:
+  $\frac{n^4 + 2 n^3 + 3 n^2 + 2 n }{8}$.
+
+  {\tt Ćwiczenie: Obliczyć to}
+  
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Pojęcie {\bf Wielomianu Cyklowego}}
+    {\bf Definicja:} Wielomianem cyklowym działania grupy $G$
+    na zbiorze $X$ nazywamy
+    wielomian postaci:
+    $P_G(z_1, \ldots, z_n) = \frac{1}{|G|} \sum_{g\in G} z_1^{c_1(g)} \cdots z_n^{c_n(g)}$
+    
+    
+    \end{block}
+  {\tt Ćwiczenie: Dlaczego wielomianem cyklowym dla ,,szachownicy $2x2$ jest:}
+  $\frac{z_1^4 + 3 z_2^2 + 2 z_4^1 + 2 z_1^2 z_2}{8}$
+
+\end{frame}
+
+\begin{frame}
+  Twierdzenie (Redfield [1927], P\'{o}lya [1937]). Niech $G$ działa na zbiorze
+  $X$, $|X| = n$. Niech $Y$ zbiór skończony, $|Y| = m$.
+  Wówczas współczynnik przy $t_1^{r_1} \cdots t_m^{r_m}$
+  w wielomianie $P_G(t_1 + \ldots t_m, t_1^2 + \ldots + t_m^2, \ldots,
+  t_1^n + \ldots t_m^n)$
+  określa liczbę orbit w której kolor $i$-ty pojawia się dokładnie $r_i$ razy.
+  \end{frame}
 
 \end{document}
 
