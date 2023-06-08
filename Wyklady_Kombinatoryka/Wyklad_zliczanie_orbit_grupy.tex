@@ -79,7 +79,7 @@ How many strictly different colouring we can find?)
 Wybieramy ,,losowo'' permutację zbioru $n$ elementowego.
 Jaka jest wartość oczekiwana liczby jej punktów stałych?
 (Let us choose randomly a permutation $\sigma$ from $S_n$. Can we
-find a formula for $E(fix(\sigma))$?).
+find a formula for $E(|fix(\sigma)|)$?).
 }
 \item<3->{
 Tworzymy ,,naszyjnik'' używając $3$ ,,pereł'' zielonych, $2$ czerwonych oraz jednej niebieskiej.
@@ -123,9 +123,21 @@ Na ile ,,istotnie różnych'' sposobów możemy to uczynić?
     
     
     \end{block}
-  {\tt Ćwiczenie: Dlaczego wielomianem cyklowym dla ,,szachownicy $2x2$ jest:}
+  {\tt Ćwiczenie: Dlaczego wielomianem cyklowym dla ,,szachownicy $2\times 2$ jest:}
+  {\tt Exercise: Explain why the cyclic polynomial for the ''chessboard'' of
+    size $2\times 2$ is :}
   $\frac{z_1^4 + 3 z_2^2 + 2 z_4^1 + 2 z_1^2 z_2}{8}$
 
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Zadanie:}
+    Rozważmy naszyjnik złożony z $6$ ,,pereł''
+    i grupę jego rotacji (Uwaga: w kontekście tego zadania nie zaliczamy do elementów naszej grupy
+    symetrii!).
+    Znaleźć jego wielomian cyklowy.
+  \end{block}
+  Odpowiedź: $\frac{z_1^6 + 2 z_6 + z_2^3 + 2 z_3^2}{6}$.
 \end{frame}
 
 \begin{frame}
@@ -136,6 +148,5 @@ Na ile ,,istotnie różnych'' sposobów możemy to uczynić?
   t_1^n + \ldots t_m^n)$
   określa liczbę orbit w której kolor $i$-ty pojawia się dokładnie $r_i$ razy.
   \end{frame}
-
 \end{document}
 
