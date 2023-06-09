@@ -9,8 +9,7 @@
 \newcommand{\Fix}{\mathit{Fix}}
 \newcommand{\stirlingii}{\genfrac{\{}{\}}{0pt}{}}
 
-\documentclass{beamer} 
-%\documentclass[a4paper, 11pt, xcolor=dvipsnames]{beamer} 
+\documentclass[a4paper, 11pt, xcolor=dvipsnames]{beamer} 
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{t1enc}
@@ -29,13 +28,14 @@
 \mode<presentation> {
 \usetheme{Madrid} 
 }
+\usecolortheme[named=Fuchsia]{structure}
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 
 %%% to co nizej to byl standardowy temat:
 %\usecolortheme[rgb={0.1,0.6,0.3}]{structure}
 %%% na razie taki :-)
-\usecolortheme[named=violet]{structure}
+%\usecolortheme[named=violet]{structure}
 %\usecolortheme[named=RubineRed]{structure} 
 %\usecolortheme[named=CarnationPink]{structure}
 \begin{document} 
@@ -47,12 +47,15 @@
 %\setbeamercolor{bibliography item}{fg=black}
 %\setbeamercolor*{bibliography entry title}{fg=black}
 %-----------------------------------
-\title[Zliczanie orbit grupy]{
-  ...
+\title{
+  Zliczanie orbit grupy
 } 
 %\subtitle{}
 \author{} 
 \date{\today}
+\institute{
+  \texttt{e-mail: andrzej.nowik@ug.edu.pl}\\
+}
 %---------------------
 \begin{frame} 
   \titlepage 
@@ -61,13 +64,14 @@
 %\section[Outline of the talk]{}
 %\frame{\tableofcontents}
 %----------------------------------
-%\section{Introduction}
-\begin{frame}
-\uncover<1->{
+\section{An Introduction}
+
+\setbeamertemplate{enumerate items}[square] % Places the numbers on little squares.
+
+\begin{frame}\frametitle{A couple of exercies}
 \begin{block}{Zadania o wspólnym mianowniku}
 \end{block}
-}
-\begin{itemize}
+\begin{enumerate}
 
 \item<1->{
 Kolorujemy ,,szachownicę'' $2 \times 2$ za pomocą $n$ kolorów.
@@ -85,12 +89,13 @@ find a formula for $E(|fix(\sigma)|)$?).
 Tworzymy ,,naszyjnik'' używając $3$ ,,pereł'' zielonych, $2$ czerwonych oraz jednej niebieskiej.
 Na ile ,,istotnie różnych'' sposobów możemy to uczynić?
 }
-\end{itemize}
+\end{enumerate}
 \end{frame}
 
-
-\begin{frame}
-  \begin{block}{Lemat Burnside'a}
+\begin{frame}\frametitle{Lemat Burnside'a}
+  \begin{block}{Lemat Burnside'a (Burnside Lemma)}  
+  \begin{itemize}
+  \item<1-> {\it Lemat Burnside'a}
     Jeśli grupa $G$ działa na zbiorze $X$ to
     liczba orbit $\Omega$ tego działania
     wyraża się wzorem:
@@ -98,11 +103,11 @@ Na ile ,,istotnie różnych'' sposobów możemy to uczynić?
     the formula for counting the number of an orbits
     is here:)
     $|\Omega| = \frac{1}{|G|} \sum_{g\in G} |fix(g)|$
-  \end{block}
-  \begin{block}{Historical remarks}
+  \item<2-> {\it Historical remarks}
     This lemma is sometimes called ''The lemma that is not Burnside's''
     or Cauchy ([1845], Frobenius [1887] lemma).
-    \end{block}
+  \end{itemize}
+  \end{block}  
 \end{frame}
 
 \begin{frame}
@@ -115,19 +120,21 @@ Na ile ,,istotnie różnych'' sposobów możemy to uczynić?
 \end{frame}
 
 \begin{frame}
-  \begin{block}{Pojęcie {\bf Wielomianu Cyklowego}}
-    {\bf Definicja:} Wielomianem cyklowym działania grupy $G$
-    na zbiorze $X$ nazywamy
+  \begin{block}{Pojęcie {\bf Wielomianu Cyklowego (The Cycle index)}}
+  \begin{itemize}
+  \item<1-> 
+    {\bf Definicja:} Wielomianem cyklowym (a cycle index of an action of
+    the group $G$ on a set $X$) działania grupy $G$  na zbiorze $X$ nazywamy
     wielomian postaci:
     $P_G(z_1, \ldots, z_n) = \frac{1}{|G|} \sum_{g\in G} z_1^{c_1(g)} \cdots z_n^{c_n(g)}$
-    
-    
-    \end{block}
-  {\tt Ćwiczenie: Dlaczego wielomianem cyklowym dla ,,szachownicy $2\times 2$ jest:}
-  {\tt Exercise: Explain why the cyclic polynomial for the ''chessboard'' of
+  
+  \item<2->  {\tt Ćwiczenie: Dlaczego wielomianem cyklowym (''cycle index'')
+      dla ,,szachownicy $2\times 2$ jest:}
+  {\tt Exercise: Explain why the ''cycle index'' for the ''chessboard'' of
     size $2\times 2$ is :}
   $\frac{z_1^4 + 3 z_2^2 + 2 z_4^1 + 2 z_1^2 z_2}{8}$
-
+  \end{itemize}
+  \end{block}
 \end{frame}
 
 \begin{frame}
@@ -140,13 +147,46 @@ Na ile ,,istotnie różnych'' sposobów możemy to uczynić?
   Odpowiedź: $\frac{z_1^6 + 2 z_6 + z_2^3 + 2 z_3^2}{6}$.
 \end{frame}
 
-\begin{frame}
+\begin{frame}\frametitle{The P\'{o}lya Theorem}
+  \begin{block}{Theorem}
   Twierdzenie (Redfield [1927], P\'{o}lya [1937]). Niech $G$ działa na zbiorze
   $X$, $|X| = n$. Niech $Y$ zbiór skończony, $|Y| = m$.
   Wówczas współczynnik przy $t_1^{r_1} \cdots t_m^{r_m}$
   w wielomianie $P_G(t_1 + \ldots t_m, t_1^2 + \ldots + t_m^2, \ldots,
   t_1^n + \ldots t_m^n)$
   określa liczbę orbit w której kolor $i$-ty pojawia się dokładnie $r_i$ razy.
-  \end{frame}
+  \end{block}
+\end{frame}
+
+
+\begin{frame}\frametitle{The P\'{o}lya Theorem - c.d.}
+  Zatem jak zliczamy liczbę pokolorowań niezmienniczych
+  o zadanej liczbie odpowiednich kolorów?:
+
+\setbeamertemplate{itemize items}[square] % Places the numbers on little squares.
+\begin{itemize}
+\item<1->
+  We compute the cycle index (piszemy wielomian cyklowy);
+\item<2->
+  We substitue for $z_j$ a sum $t_1^j + \ldots t_k^j$,
+  czyli np:
+  \begin{tabbing}
+    $z_1 = t_1 + t_2 + \ldots + t_k$ \\
+    $z_2 = t_1^2 + t_2^2 + \ldots + t_k^2$\\
+    $\ldots$
+  \end{tabbing}
+\item<3-> ...albo jeszcze lepiej tak:
+  \begin{tabbing}
+    $z_1 = R + G + B$ \\
+    $z_2 = R^2 + G^2 + B^2$\\
+    $\ldots$ %%% specjalnie tu i powyzej nie dajemy \\ bo inaczej robi się jakiś odstęp do itema i
+    %%%% nie mieści się na slajdzie!
+  \end{tabbing}
+\item<4-> ... a następnie wybieramy ten współczynnik który
+  jest przy odpowiednim jednomianie ,,odpowiadającym'' za zadane
+  kolory, czyli np jeśli chcemy mieć dwa czerwone, trzy zielone i dwa niebieskie
+  ,,perły'' to szukamy współczynnika przy jednomianie $R^2 G^3 N^2$.
+\end{itemize}
+\end{frame}
 \end{document}
 
