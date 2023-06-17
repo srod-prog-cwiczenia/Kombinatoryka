@@ -1,0 +1,166 @@
+\documentclass[12pt]{article} % use larger type; default would be 10pt
+
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{hyperref}
+
+\addtolength{\textwidth}{3cm}
+\addtolength{\textheight}{5.5cm}
+\addtolength{\voffset}{-2.5cm}
+\addtolength{\hoffset}{-1cm}
+
+\renewcommand\baselinestretch{1.1}
+
+
+\DeclareMathOperator{\Q}{\mathbb{Q}} 
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+\def\R{\mathbb{R}} 
+\def\N{\mathbb{N}}
+\def\Z{\mathbb{Z}}
+
+\def\CC{\mathcal{C}}
+\def\FF{\mathcal{F}} 
+\def\MM{\mathcal{M}} 
+\def\NN{\mathcal{N}} 
+
+\newcommand{\rational}{\mathbb{Q}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\integers}{\mathbb{Z}}
+\newcommand{\complex}{\mathbb{C}}
+
+\newcounter{zad}
+\def\numzad{\smallskip\noindent\refstepcounter{zad}{\bf Zadanie \thezad.} }
+\pagestyle{empty}
+
+\date{}
+
+\begin{document}
+
+\bigskip
+\centerline{\large{\bf{Zadania z kombinatoryki (seria nr 1)}}}
+\bigskip
+
+\numzad
+
+Udowodnić że liczba sposobów którymi można rozsadzić $n$
+spośród $m$ osób przy okrągłym stole jest równa
+$\frac{[m]_n}{n}$ - utożsamiamy rozsadzenia różniące
+sie jedynie cyklicznym przesunięciem osób wokół stołu.
+Uwaga: $[m]_n = m \cdot (m - 1) \ldots (m - n + 1)$.
+
+\numzad
+Ile jest liczb naturalnych z przedziału 
+$[1000, 10000]$ takich że:
+\begin{enumerate}
+\item
+  wszystkie cyfry są nieparzyste;
+\item
+  wszystkie cyfry są parami różne.
+\end{enumerate}
+ 
+\numzad
+ Udowodnić że:
+\begin{enumerate}
+\item
+  $[p + q]_n = \sum_{k=0}^n {n \choose k} [p]_k [q]_{n-k}$
+\item
+  $[p + q]^n = \sum_{k=0}^n {n \choose k} [p]^k [q]^{n-k}$
+\end{enumerate} 
+ 
+ (przypomnienie:
+$[m]_n = m \cdot (m - 1) \ldots (m - n + 1)$ oraz
+$[m]^n = m \cdot (m + 1) \ldots (m + n - 1)$ 
+ ).
+ 
+\numzad
+ Udowodnić (najlepiej kombinatorycznie, ale gdy nie
+ będzie wychodzić, to analitycznie (=rachunkowo)) że
+ ${n\choose 0} < {n\choose 1} < \ldots < {n\choose \lfloor\frac{n}{2}\rfloor} = 
+ {n\choose \lceil\frac{n}{2}\rceil} > \ldots > {n\choose n}$.
+ 
+\numzad
+ Udowodnić że iloczyn dowolnych kolejnych $k$ liczb
+ naturalnych jest podzielny przez $k!$ (wskazówka:
+ skorzystać z faktu że każdy współczynnik dwumienny jest
+ liczbą całkowitą, w szczególności ${n + k \choose n}$).
+ 
+\numzad
+ Ile  liczb naturalnych nie przekraczających $1000$
+ nie dzieli się przez $3$, $7$ ani przez $11$?
+ 
+\numzad
+ Iloma sposobami można na szachownicy $8\times 8$ 
+ $8$ wież (wieża porusza się w górę, w dół, w lewo lub w prawo
+ o dowolną liczbę pól: 
+ \url{https://pl.wikipedia.org/wiki/Wie%C5%BCa_(szachy)}
+  ) tak aby każde dwie nie atakowały się wzajemnie
+  i aby żadna nie leżała na wybranej przekątnej.
+  
+\numzad
+  Znaleźć liczbę ciągów długości $2n$  takich że każda liczba
+  $i \in {1,\ldots, n}$ występuje dokładnie dwa razy
+  przy czym każde dwa kolejne wyrazy nie są równe.
+  
+  Wskazówka: Zastosować zasadę włączania - wyłączania
+  \url{https://pl.wikipedia.org/wiki/Zasada_w%C5%82%C4%85cze%C5%84_i_wy%C5%82%C4%85cze%C5%84}
+  
+\numzad
+  Ile jest podzbiorów $11$ elementowych zbioru z powtórzeniami
+  gdzie: a - występuje 4 razy, b - 3 razy zaś c - 7 razy
+  Wskazówka: Spróbować zastosować zasadę włączania - wyłączania.
+  
+  Przypomnienie:
+{\bf Nieporządkiem} nazywamy permutację bez punktów stałych,
+czyli taką 
+bijekcję
+$\sigma\colon {1,\ldots,n} \to {1,\ldots,n}$
+że $\sigma(i) \not= i$.
+
+Liczbę wszystkich nieporządków na zbiorze ${1,\ldots,n}$
+oznaczamy przez $D_n$. 
+Bardzo proszę o zapoznanie się z tym artykułem:
+\url{https://pl.wikipedia.org/wiki/Nieporz%C4%85dek} 
+
+Mamy:
+  $D_n = n! \cdot \sum_{k = 0}^n \frak{(-1)^k}{k!}$.
+
+\numzad
+Udowodnić (jeśli się uda to najlepiej kombinatorycznie!)
+zależności:
+$D_{n+1} = (n + 1) D_n + (-1)^{n + 1}$.
+$D_{n+1} = n (D_n + D_{n-1})$.
+
+
+\numzad
+Korzytając z jednej z możliwych interpretacji kombinatorycznych
+liczb Fibonacciego (np że jest to liczba podziałów na kafelki
+$2\times 1$ prostokąta $n\times 2$), etc.,etc.
+(apeluję by zapoznać się - nawet pobieżnie - z tym obszernym artykułem:
+\url{https://pl.wikipedia.org/wiki/Ci%C4%85g_Fibonacciego}
+)
+\begin{enumerate}
+\item
+  $F_{n+m} = F_n F_m + F_{n-1} F_{m-1}$;
+\item
+  $NWD(F_n,F_m) = F_{NWD(n+1,m+1) - 1}$,
+  $m,n>1$.    
+\end{enumerate}    
+
+\numzad
+Wykazać że wyznacznik macierzy:
+\begin{equation*}
+\begin{pmatrix}
+1 & -1 &  0 & \cdots & 0 \\
+1 &  1 & -1 & \cdots & 0 \\
+0 &  1  & 1 & \cdots & 0 \\
+\ldots & \ldots & \ldots & \ldots & \ldots \\
+\end{pmatrix}
+\end{equation*}
+tworzy ciąg Fibonacciego. 
+\end{document}
