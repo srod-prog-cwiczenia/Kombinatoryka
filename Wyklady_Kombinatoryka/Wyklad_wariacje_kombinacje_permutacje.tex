@@ -1,0 +1,226 @@
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\nnatural}{\mathbb{N}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cM}{{\mathcal{M}}}
+\newcommand{\cN}{{\mathcal{N}}}
+\newcommand{\cIMN}{\mathcal{I}_{\mathcal{N}, \mathcal{M}}}
+\newcommand{\Fix}{\mathit{Fix}}
+\newcommand{\stirlingii}{\genfrac{\{}{\}}{0pt}{}}
+
+\documentclass{beamer} 
+%\documentclass[a4paper, 11pt, xcolor=dvipsnames]{beamer} 
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{amsmath}
+\usepackage{graphics} 
+\usepackage{fancybox} 
+\usepackage{makecell}
+
+%\usepackage{helvet}
+%All font families are not available in every Beamer installation, but
+%typically, at least some of the following families will be available:
+%    serif          avant        bookman      chancery        charter
+%     euler         helvet       mathtime       mathptm       mathptmx
+%    newcent      palatino        pifont        utopia
+
+\mode<presentation> {
+\usetheme{Madrid} 
+}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+\usecolortheme[rgb={0.1,0.6,0.3}]{structure} 
+%\usecolortheme[named=RubineRed]{structure} 
+%\usecolortheme[named=CarnationPink]{structure}
+%\usecolortheme[rgb={0.1,0.6,0.3}]{structure} 
+\begin{document} 
+%\setbeamercovered{transparent=15} %Ukryte (np przez uncover beda polwidoczne)
+\setbeamercovered{dynamic}        %Ukryte (np przez uncover beda polwidoczne, im blizej tym mocniej)
+%%% to ponizej tez nie dziala...
+%\transglitter[direction=90]
+%%% to nizej mialo zmienic kolor bibliografii lecz niestety nie zadzialalo.
+%\setbeamercolor{bibliography item}{fg=black}
+%\setbeamercolor*{bibliography entry title}{fg=black}
+%-----------------------------------
+\title[Wariacje, kombinacje, permutacje...(Variations, combinations, permutations)]{
+  Wariacje, kombinacje, permutacje, liczby Stirlinga
+  liczby podziałowe, liczby Bella, ,,pudełkologia'', etc.
+  Variations, combinations, permutations, Stirling numbers,
+  Bell numbers, ``carton-ology'', etc.
+} 
+%\subtitle{}
+\author{} 
+\date{\today}
+%---------------------
+\begin{frame} 
+  \titlepage 
+\end{frame} 
+%---------------------
+%\section[Outline of the talk]{}
+%\frame{\tableofcontents}
+%----------------------------------
+
+\begin{frame}
+  \uncover<1->{
+    \begin{block}{Liczby podziałowe (The partition numbers)}
+    \end{block}  
+  }
+\uncover<2->{
+  {\bf Podział} liczby $n$ na $k$ składników to przedstawienie $n$
+ w postaci sumy
+$a_0 + \dots + a_{k-1} = n$,
+gdzie $1 \leq a_0 \leq a_1 \leq \ldots a_{k-1} \leq n$
+Liczbę podziałów $n$ na $k$ składników oznaczamy przez $P(n,k)$.
+{\bf Ważne!} Nie liczy się kolejność i nie dopuszczamy tutaj zera.
+}
+\uncover<3->{
+  A {\bf partition} of a given numer $n$ into $k$ parts
+  is a representation of the number $n$ into the following sum:
+$a_0 + \dots + a_{k-1} = n$,
+where $1 \leq a_0 \leq a_1 \leq \ldots a_{k-1} \leq n$
+The number of all partitions of $n$ into $k$ parts we denote by $P(n,k)$.
+{\bf Please notice!} The order of these numbers is not important, also the
+zero value is forbidden.
+}
+\uncover<4->{
+Przykład (Example(: 
+$P(7, 4) = 3$, bo mamy (since we have):
+\begin{tabbing}
+$7 = 1 + 1 + 1 + 4$ \\
+$7 = 1 + 1 + 2 + 3$ \\
+$7 = 1 + 2 + 2 + 2$ \\
+\end{tabbing}
+}
+\end{frame}
+
+\begin{frame}
+  \uncover<1->{
+    {\bf Liczbą podziałową} nazywamy liczbę wszystkich możliwych podziałów
+    liczby $n$ na dodatnie składniki, oznaczamy ją przez $p(n)$.
+  }
+  \uncover<2->{
+    {\bf The partition number} We consider {\it all} possible partitions of
+    $n$ into nonzero parts. The number of all these partitions we denote by $p(n)$.
+  }
+  \uncover<3->{
+    {\bf (Przykład) Example: }
+    $p(6) = 11$, bo (since):
+\begin{tabbing}
+  $6 = 6$\\
+  $6 = 5 + 1$\\
+  $6 = 4 + 2$\\
+  $6 = 4 + 1 + 1$\\
+  $6 = 3 + 3$\\
+  $6 = 3 + 2 + 1$\\
+  $6 = 3 + 1 + 1 + 1$\\
+  $6 = 2 + 2 + 2$\\
+  $6 = 2 + 2 + 1 + 1$\\
+  $6 = 2 + 1 + 1 + 1 + 1$\\
+  $6 = 1 + 1 + 1 + 1 + 1 + 1$\\
+\end{tabbing}  
+  }
+\end{frame}
+
+\begin{frame}
+\uncover<1->{
+\begin{block}{,,Pudełkologia'' (Carton-ology :) ):}
+\begin{table}
+  \centering
+    \begin{tabular}{| c | c | c |}
+    \thead{n pudełek (boxes)\\ k obiektów (balls)}  & \thead{Pudełka rozróżnialne\\ (Distinguishable boxes)} & \thead{Pudełka NIErozróżnialne \\ (indistinguishable boxes)} \\
+    \hline
+    \thead{Obiekty rozróżnialne\\ (dist. balls)} & $n^k$  &  $\sum_{j = 1}^n \stirlingii{k}{j}$\\
+    \hline
+    \thead{Obiekty NIErozróżnialne\\ (indist.balls)}  & $\binom{n + k - 1}{k} = \binom{n + k - 1}{n - 1}$ &  $\sum_{j = 1}^n P(k, j) = P(n + k, n)$ \\
+    \hline
+    \end{tabular}
+  \caption{Rozmieszczenia bez ograniczeń (without any restrictions)}
+   \end{table}
+\end{block}
+}
+\end{frame}
+
+\begin{frame}
+\uncover<1->{
+\begin{block}{,,Pudełkologia - c.d.'' (Carton-ology - continued :) ):}
+\begin{table}
+  \centering
+    \begin{tabular}{| c | c | c |}
+    \hline
+      \thead{n pudełek (boxes)\\ k obiektów (balls) \\ the assumption:\\ $k \leq n$} & \thead{Pudełka rozróżnialne\\ Distinguishable boxes} & \thead{Pudełka NIErozróżnialne\\ Indistinguishable boxes} \\
+    \hline
+    \thead{Obiekty rozróżnialne\\ dist.balls} & \thead{\small $[n]_k =$ \\ $n \cdot (n-1) \cdot \ldots \cdot (n - k + 1)$ \\
+      $= \frac{n!}{(n-k)!}$}  &  $1$\\
+    \hline
+    \thead{Obiekty NIErozróżnialne\\ indist.balls}  & $\binom{n}{k}$ &  $1$ \\
+    \hline
+    \end{tabular}
+  \caption{W każdym pudełku może być co najwyżej {\bf JEDEN} obiekt (WITH exclusion)}
+   \end{table}
+\end{block}
+}
+\end{frame}
+
+\begin{frame}
+\uncover<1->{
+\begin{block}{,,Pudełkologia - c.d.'' (Carton-ology - continued :) ):}
+\begin{table}
+  \centering
+    \begin{tabular}{| c | c | c |}
+    \hline
+      \thead{n pudełek (boxes)\\ k obiektów (balls) \\ the assumption:\\ $n \leq k$} & \thead{Pudełka rozróżnialne\\ Distinguishable boxes} & \thead{Pudełka NIErozróżnialne\\ Indistinguishable boxes} \\
+    \hline
+    \thead{Obiekty rozróżnialne\\ Dist.balls} & \thead{\small $s(k, n) =$ \\ $n! \stirlingii{k}{n}$ \\ (i.e. the number of all\\ surjections from a\\ $k-$ elem. set\\ onto an $n-$ elem. set) }  & \makecell{\small $\stirlingii{k}{n}$}\\
+    \hline
+    \thead{Obiekty NIErozróżnialne\\ Indist.balls} & $\binom{k - 1}{k - n} = \binom{k - 1}{n - 1}$ & $P(k, n)$ \\
+    \hline
+    \end{tabular}
+  \caption{W każdym pudełku MUSI być co najmniej jeden obiekt}
+   \end{table}
+\end{block}
+}
+\end{frame}
+
+\begin{frame}
+\uncover<1->{
+\begin{block}{,,Pudełkologia - c.d.'' (Carton-ology - continued :) ):}
+\begin{table}
+  \centering
+    \begin{tabular}{| c | c | c |}
+    \hline
+      \thead{n pudełek (boxes)\\ k obiektów (balls)} & \thead{Pudełka rozróżnialne\\ Distinguishable boxes} & \thead{Pudełka NIErozróżnialne\\ Indistinguishable boxes} \\
+    \hline
+    \thead{Obiekty rozróżnialne\\ dist.balls} & \thead{\small $[n]^k =$ \\ $n \cdot (n+1) \cdot \ldots \cdot (n + k - 1)$ \\
+      $= \binom{n + k - 1}{k} \cdot k!$}  &  ??? \\
+    \hline
+    \thead{Obiekty NIErozróżnialne\\ indist.balls}  & --- & --- \\
+    \hline
+    \end{tabular}
+  \caption{W każdym pudełku liczy się kolejność umieszczania obiektów}
+   \end{table}
+\end{block}
+}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Uzupełnienie o wzory (suplement):}
+\end{block}
+Liczba surjekcji ze zbioru $n$-elementowego $X$
+na zbiór $m$-elementowy (przy czym oczywiście
+zakładamy że $m \leq n$ wynosi
+(A formula for the number of all surjections from the $n$-size
+set $X$ onto the $m$-size set $Y$):
+\[s(n,m) = \sum_{k = 0}^m (-1)^k \binom{m}{k} (m - k)^n
+\]
+
+We have also: \[
+\stirlingii{n}{m} = \frac{s(n,m)}{m!}
+\]
+\end{frame}
+
+
+\end{document}
+
