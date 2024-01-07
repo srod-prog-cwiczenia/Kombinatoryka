@@ -1,0 +1,78 @@
+\documentclass[12pt]{article} % use larger type; default would be 10pt
+
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{hyperref}
+
+\addtolength{\textwidth}{3cm}
+\addtolength{\textheight}{5.5cm}
+\addtolength{\voffset}{-2.5cm}
+\addtolength{\hoffset}{-1cm}
+
+\renewcommand\baselinestretch{1.1}
+
+
+\DeclareMathOperator{\Q}{\mathbb{Q}} 
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+\def\R{\mathbb{R}} 
+\def\N{\mathbb{N}}
+\def\Z{\mathbb{Z}}
+
+\def\CC{\mathcal{C}}
+\def\FF{\mathcal{F}} 
+\def\MM{\mathcal{M}} 
+\def\NN{\mathcal{N}} 
+
+\newcommand{\rational}{\mathbb{Q}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\integers}{\mathbb{Z}}
+\newcommand{\complex}{\mathbb{C}}
+
+\newcounter{zad}
+\def\numzad{\smallskip\noindent\refstepcounter{zad}{\bf Zadanie \thezad.} }
+\pagestyle{empty}
+
+\date{}
+
+\begin{document}
+
+\bigskip
+\centerline{\large{\bf{Zadania z kombinatoryki (seria nr 2)}}}
+\bigskip
+
+\numzad
+  Wyciągamy z n par ,,lewych'' i n par ,,prawych'' identycznych kapci parę.
+Jakie jest prawdopodobieńswo że będzie ona ,,do pary''?
+
+Odp:  $\frac{n^2}{\binom{2n}{2}}$
+
+\numzad
+Ile jest liczb c - cyfrowych ktorych suma cyfr wynosi s?
+Odp: Dla $s \leq 9$ mamy wzór: $\binom{c - 1 + s}{s} - \binom{c - 2 + s}{s}$.
+A co będzie dla $s > 9$?
+
+\numzad 
+Grupa składajaca sie z n osób ustawia się w kolejce.
+Obliczyć prawdopodobieństwo tego że pomiędzy dwiema
+ustalonymi wcześniej osobami będzie dokładnie k osób.
+
+Odp: $\frac{2\cdot(n-k-1)\cdot(n-2)}{n!}$.
+
+\numzad
+Wiadomo że liczba wszystkich ciągów binarnych o długościach $\leq n$
+(wliczając też ciąg pusty: $()$) wynosi $2^{n + 1} - 1$.
+Znaleźć ,,naturalną'' odpowiedniość między zbiorem ciągów
+binarnych o długości $\leq n$ a zbiorem ciągów binarnych
+długości $2^{n+1}$ z wykluczonym ciągiem składającym się
+z samych zer.
+
+Wskazówka: ,,Obcinamy'' końcówkę składającą się z samych
+zer do napotkania pierwszej jedynki i ją też usuwamy.
+
+\end{document}

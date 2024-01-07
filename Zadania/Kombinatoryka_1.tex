@@ -128,7 +128,7 @@ Bardzo proszę o zapoznanie się z tym artykułem:
 \url{https://pl.wikipedia.org/wiki/Nieporz%C4%85dek} 
 
 Mamy:
-  $D_n = n! \cdot \sum_{k = 0}^n \frak{(-1)^k}{k!}$.
+  $D_n = n! \cdot \sum_{k = 0}^n \frac{(-1)^k}{k!}$.
 
 \numzad
 Udowodnić (jeśli się uda to najlepiej kombinatorycznie!)
@@ -136,12 +136,13 @@ zależności:
 $D_{n+1} = (n + 1) D_n + (-1)^{n + 1}$.
 $D_{n+1} = n (D_n + D_{n-1})$.
 
-
 \numzad
-Korzytając z jednej z możliwych interpretacji kombinatorycznych
+Korzystając z jednej z możliwych interpretacji kombinatorycznych
 liczb Fibonacciego (np że jest to liczba podziałów na kafelki
-$2\times 1$ prostokąta $n\times 2$), etc.,etc.
-(apeluję by zapoznać się - nawet pobieżnie - z tym obszernym artykułem:
+$2\times 1$ prostokąta $n\times 2$, albo
+że jest to liczba rozmieszczeń lwów w $n$ klatkach tak aby
+żadne dwie sąsiadujące klatki nie były ,,zajęte''), etc.,etc.
+(warto zapoznać się - nawet pobieżnie - z tym obszernym artykułem:
 \url{https://pl.wikipedia.org/wiki/Ci%C4%85g_Fibonacciego}
 )
 \begin{enumerate}
@@ -149,7 +150,9 @@ $2\times 1$ prostokąta $n\times 2$), etc.,etc.
   $F_{n+m} = F_n F_m + F_{n-1} F_{m-1}$;
 \item
   $NWD(F_n,F_m) = F_{NWD(n+1,m+1) - 1}$,
-  $m,n>1$.    
+  $m,n>1$.
+  (chyba że odpowiednio dostosujemy (jak?) numerację liczb Fibonacciego,
+  wtedy mamy nawet: $NWD(F_n,F_m) = F_{NWD(n,m)}$)
 \end{enumerate}    
 
 \numzad
