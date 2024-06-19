@@ -1,0 +1,251 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                       %
+%                          TEMPLATE                                     %
+%                                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[12pt]{article}
+
+%---------------------------------------------------------------------
+% AMS packages 
+%---------------------------------------------------------------------
+ 
+% Packiet loaded automatically by amsart:
+%  1. amsmath, 2. amsthm, 3. amsfonts.
+ 
+%\usepackage{amssymb}
+%\usepackage{amsmath}
+ 
+% *** 'amsfonts': 
+% boldface of the symbol of the real line: 'R'
+\usepackage{amsfonts}
+ 
+% *** 'amsthm': 
+% 1. makes easy to modify the macro: \newtheorem{}{} since contains
+% \theoremstyle{}
+% 2. contains macro: \begin{proof} ... \end{proof}
+\usepackage{amsthm} 
+
+
+%%%%%%%%%%%%%%% Polish letter packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[polish]{babel}
+%\usepackage[latin2]{inputenc}
+%\usepackage{t1enc}
+ 
+%---------------------------------------------------------------------
+% Theorems 
+%---------------------------------------------------------------------
+ 
+% Theorem style 'plain' are for: Theorem, Lemma, Corollary, 
+% Proposition, Conjecture, Criterion, Algorithm  
+\theoremstyle{plain} 
+\newtheorem{theorem}{Theorem}[section] 
+\newtheorem{lemma}[theorem]{Lemma} 
+\newtheorem{corollary}[theorem]{Corollary} 
+\newtheorem{conclusion}[theorem]{Corollary} 
+\newtheorem{claim}[theorem]{Claim} 
+\newtheorem{fact}[theorem]{Fact} 
+\newtheorem{proposition}[theorem]{Proposition} 
+\newtheorem{axiom}{Axiom} 
+ 
+% Theorem style 'definition' are for: Definition, Condition, Problem, 
+% Example 
+ 
+\theoremstyle{definition} 
+\newtheorem{definition}[theorem]{Definition} 
+\newtheorem{example}[theorem]{Example} 
+\newtheorem{exercise}{Exercise} 
+\newtheorem*{solution}{Solution} 
+ 
+% Theorem style 'remark' are for: Remark, Note, Notation, Claim, 
+% Summary, Acknowledgement, Case, Conclusion 
+ 
+\theoremstyle{remark} 
+\newtheorem*{remark}{Remark} 
+\newtheorem*{notation}{Notation} 
+\newtheorem*{acknowledgement}{Acknowledgement} 
+
+%%%%%%%%%%%%%%%%%  The previous one %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{observation}[theorem]{Observation}
+%\newtheorem{conclusion}[theorem]{Conclusion}
+%\newtheorem{question}[theorem]{Question}
+%\newtheorem{problem}[theorem]{Problem}
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{definition}[theorem]{Definiton}
+%\newtheorem{claim}[theorem]{Claim}
+%\newtheorem{fact}[theorem]{Fact}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+%\newtheorem{example}[theorem]{Example}
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{remark}[theorem]{Remark}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%A
+\newcommand{\afc}{AFC}
+\newcommand{\afcbar}{\overline{AFC}}
+\newcommand{\arr}{\rightarrow}
+\newcommand{\Arr}{\Rightarrow}
+
+%B
+\newcommand{\baire}{\omega^{\omega}}
+\newcommand{\blacksquare}{\begin{flushright} \rule{2mm}{2mm} \end{flushright}}
+\newcommand{\Bor}{\mbox{${\cal B}or$}}
+%Previous seems to be much finer than next.
+%\newcommand{\Bor}{{\it Bor}}
+\newcommand{\borelucrz}{Borel-UCR_0}
+
+%C
+\newcommand{\ca}{2^{\omega}}
+\newcommand{\cantor}{\ca}
+\newcommand{\Card}[1]{\Vert #1 \Vert}
+
+%D
+\newcommand{\dom}{{\rm dom}}
+\newcommand{\dummy}{{\tt Blah blah blah}}
+
+%E
+\newcommand{\Even}{\hbox{\rm \tiny Even}}
+
+%F
+\newcommand{\finsub}{[\omega]^{<\omega}}
+\newcommand{\forces}{\mathrel{\|}\joinrel\mathrel{-}}
+
+%G
+\newcommand{\Graph}{\hbox{\it Graph}}
+
+%H
+\newcommand{\homeomorphic}{\approx}
+
+%I
+\newcommand{\incr}{\omega^{\uparrow \omega }}
+\newcommand{\infsub}{[\omega]^{\omega}}
+
+%L
+\newcommand{\la}{\langle}
+
+%M
+\newcommand{\meager}{{\cal MGR}}
+\newcommand{\minideal}{${\cal F}_{\hbox{\rm \scriptsize min}}(\neg
+  D)\;$}
+
+%N
+\newcommand{\neglig}{{\cal N}}
+\newcommand{\nnatural}{\mathbb{N}}
+
+%O
+\newcommand{\Odd}{\hbox{\rm \tiny Odd}}
+
+%P
+\newcommand{\Part}{{\it Part}}
+\newcommand{\Perf}{{\it Perf}}
+%%%\newcommand{\proof}{\flushleft{ \sc Proof. } \\ }
+\newcommand{\Proof}[1]{\bigbreak\noindent{\bf Proof #1}\enspace}
+
+%Q
+%%%\newcommand{\qed}{{\hfill\vrule height6pt width6pt depth1pt\medskip}}
+%\newcommand{\qed}{\sharp}
+\newcommand{\QED}{\hspace{0.1in} \Box \vspace{0.1in}}
+
+%R
+\newcommand{\ra}{\rangle}
+\newcommand{\ran}{{\rm ran}}
+\newcommand{\rational}{\mathbb{Q}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\restriction}{{\hbox{$\,|\grave{}\,$}}}
+
+%S
+\newcommand{\seq}{\subseteq}
+%%%\newcommand{\square}{\hbox{\ \ \ \ \ \vrule\vbox{\hrule\phantom{o}\hrule}\vrule}}
+% a small restriction:
+\newcommand{\srestriction}{{\hbox{${\scriptstyle\,|\grave{}\,}$}}}
+
+%U
+\newcommand{\up}{\uparrow}
+\newcommand{\ucrz}{UCR_0}
+
+%%%%%%%%%%%%%%%%%%%%%% Calligraphic font commands %%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cA}{{\cal A}}
+\newcommand{\cB}{{\cal B}}
+\newcommand{\cC}{{\cal C}}
+\newcommand{\cD}{{\cal D}}
+\newcommand{\cE}{{\cal E}}
+\newcommand{\cF}{{\cal F}}
+\newcommand{\cG}{{\cal G}}
+\newcommand{\cH}{{\cal H}}
+\newcommand{\cI}{{\cal I}}
+\newcommand{\cJ}{{\cal J}}
+\newcommand{\cK}{{\cal K}}
+\newcommand{\cL}{{\cal L}}
+\newcommand{\cM}{{\cal M}}
+\newcommand{\cN}{{\cal N}}
+\newcommand{\cO}{{\cal O}}
+\newcommand{\cP}{{\cal P}}
+\newcommand{\cQ}{{\cal Q}}
+\newcommand{\cR}{{\cal R}}
+\newcommand{\cS}{{\cal S}}
+\newcommand{\cT}{{\cal T}}
+\newcommand{\cU}{{\cal U}}
+\newcommand{\cV}{{\cal V}}
+\newcommand{\cW}{{\cal W}}
+\newcommand{\cX}{{\cal X}}
+\newcommand{\cY}{{\cal Y}}
+\newcommand{\cZ}{{\cal Z}}
+
+%%%%%%%%%%%%%%%%%%%%%% Some Greek fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\oo}{\omega}
+\newcommand{\bb}{\beta}
+\newcommand{\dd}{\delta}
+\newcommand{\ee}{\varepsilon}
+\newcommand{\kk}{\kappa}
+%%%\newcommand{\th}{\theta}
+
+\renewcommand\abstractname{Summary}
+
+% To see corrections comment next line and uncomment the second one
+\newcommand{\correction}[2]{#1}
+% \newcommand{\correction}[2]{#2}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                         %
+%                      Main part                                          %
+%                                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{tabular}{| c | c | c | c | c | c | c | c | c | c | }
+\hline
+ 46  & 57 & 68 & 70 & 81 & 02 & 13 & 24 & 35 & 99  \\
+\hline
+ 71  & 94 & 37 & 65 & 12 & 40 & 29 & 06 & 88 & 53  \\
+\hline
+ 93  & 26 & 54 & 01 & 38 & 19 & 85 & 77 & 60 & 42  \\
+\hline
+ 15 & 43 & 80 & 27 & 09 & 74 & 66 & 58 & 92 & 31  \\
+\hline
+ 32 & 78 & 16 & 89 & 63 & 55 & 47 & 91 & 04 & 20  \\
+\hline
+ 67  & 05 & 79 & 52 & 44 & 36 & 90 & 83 & 21 & 18  \\
+\hline
+ 84  & 69 & 41 & 33 & 25 & 98 & 72 & 10 & 56 & 07  \\
+\hline
+  59 & 30 & 22 & 14 & 97 & 61 & 08 & 45 & 73 & 86  \\
+\hline
+  28 & 11 & 03 & 96 & 50 & 87 & 34 & 62 & 49 & 75  \\
+\hline
+  00 & 82 & 95 & 48 & 76 & 23 & 51 & 39 & 17 & 64  \\
+\hline
+\end{tabular}
+
+
+%Polish letters:    
+%Za"r"o"l"c g"e"sl"a ja"z"n. 
+%ZA"R"O"L"C G"E"SL"A JA"Z"N. 
+
+\end{document}
+

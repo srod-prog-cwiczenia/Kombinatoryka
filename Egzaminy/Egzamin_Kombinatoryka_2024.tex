@@ -59,12 +59,12 @@ There are 70 people with a PLN 1 coin and 30 people with a PLN 2 coin standing i
 The entry cost is PLN 1. What is the probability that the cash register will have no problem giving the change. Write the general formula.
 
 \numzad
-Rozpisać dokładnie znaczenie równości $R(4,4) = 18$.
+Rozpisać dokładnie znaczenie równości $R(4,4) = 18$ (liczba Ramseya).
 
 \medskip
 
 Write the complete description (interpretation) of the equality
-$R(4,4) = 18$.
+$R(4,4) = 18$ (The Ramsey number).
 
 \numzad
 Używając kodów Pr\"ufera pokazać że prawdopodobieństwo że losowo wybrane
@@ -80,4 +80,101 @@ tends to the number $\frac{1}{e}$.
 
 Hint: At first, prove that any tree has the verticle $1$ as a leaf
 if and only if $1$ does not appear in the tree's Pr\"ufer code.
+
+\numzad
+W reaktorze jądrowym znajdują się dwa rodzaje cząstek:
+$\alpha$ i $\beta$. W każdej sekundzie cząstka $\alpha$
+rozpada się na trzy cząstki typu $\beta$ i jednocześnie w tej
+samej sekundzie każda cząstka typu $\beta$ rozpada się
+na jedną cząstkę typu $\alpha$ i dwie cząstki typu $\beta$.
+Na początku mamy tylko jedną cząstkę $\alpha$.
+Ułożyć równanie rekurencyjne na sumaryczną liczbę cząstek w zależności
+od czasu i wyliczyć ile będzie cząstek w piątej sekundzie reakcji.
+
+Aby wyjaśnić opis (który notabene - zdaję sobie z tego sprawę :-) -
+może nie być krystalicznie czysto precyzyjny) załączam poniżej
+zestawienie dwóch początkowych sekund przebiegu:
+
+\[
+\alpha \rightarrow 3 \beta \rightarrow 3 \alpha + 6 \beta \rightarrow
+6 \alpha + (3 \cdot 3 + 2 \cdot 6) \beta \ldots
+\]
+
+In a nuclear reactor we have two types of particles, namely:
+$\alpha$ and $\beta$. Every second a $\alpha$ particle
+splits into three $\beta$ particles and, simultaneously, in the
+same second, every $\beta$ particle splits
+into one $\alpha$ particle and two $\beta$ particles.
+Suppose that at the beginning we have only one $\alpha$ particle.
+
+  Find a recursive formula for the total number of particles
+(depending on the number of seconds)  and calculate how many particles
+there will be in the $5^{\mathrm{th}}$ second of the reaction.
+
+  To clarify the description (which - OK, I know that :-) -
+may not be crystal clear) I attached below
+summary of the first two seconds of the reaction:
+
+\[
+\alpha \rightarrow 3 \beta \rightarrow 3 \alpha + 6 \beta \rightarrow
+6 \alpha + (3 \cdot 3 + 2 \cdot 6) \beta \ldots
+\]
+
+\numzad
+\begin{flushleft}{\bf Kwadraty grecko-łacinskie - zadanie teoretyczne z Wykładu}
+\end{flushleft}
+Snucie naszej krótkiej opowieści o kwadratach grecko-łacińskich
+zaczniemy od tego zdarzenia: Słynny Euler podejrzewał
+że nie istnieją kwadraty grecko-łacińskie dla liczb $n = 6, 10, 14, 18, \ldots$.
+  Następnie niejaki MacNeish w roku 1921 (lub 1922 (nie znam precyzyjnej daty!))
+opublikował rzekomy dowód tej hipotezy, niestety zawierał on błąd.
+  To przypuszczalnie jedna z najbardziej znanych w historii matematyki
+publikacji zawierających błędny dowód która - paradoksalnie - stanowiła
+istotny wkład w rozwój kombinatoryki m.in. przez inspirację
+dla poszukiwania poprawnego dowodu (lub jego obalenia). Palmę
+pierwszeństwa odnośnie sławy bez wątpienia dzierży artykuł naukowy
+z mniemanym ,,dowodem'' tzw. Hipotezy Czterech Barw opublikowanym przez Alfreda Kempego w roku 1879.
+
+Kropkę nad ,,i'' postawiła dopiero praca  Bose, Shrikhande oraz Parker z roku
+1959 w której autorzy obalają hipotezę Eulera.
+Dziś wiemy że kwadraty grecko-łacińskie istnieją
+dla wszystkich $n$ z wyjątkiem $n = 2$ oraz $n = 6$.
+
+  Tu załączam znaleziony komputerowo słynny przykład kwadratu grecko łacińskiego
+który oczywiście obala przypuszczenie Eulera:
+
+
+\begin{tabular}{| c | c | c | c | c | c | c | c | c | c | }
+\hline
+ 46  & 57 & 68 & 70 & 81 & 02 & 13 & 24 & 35 & 99  \\
+\hline
+ 71  & 94 & 37 & 65 & 12 & 40 & 29 & 06 & 88 & 53  \\
+\hline
+ 93  & 26 & 54 & 01 & 38 & 19 & 85 & 77 & 60 & 42  \\
+\hline
+ 15 & 43 & 80 & 27 & 09 & 74 & 66 & 58 & 92 & 31  \\
+\hline
+ 32 & 78 & 16 & 89 & 63 & 55 & 47 & 91 & 04 & 20  \\
+\hline
+ 67  & 05 & 79 & 52 & 44 & 36 & 90 & 83 & 21 & 18  \\
+\hline
+ 84  & 69 & 41 & 33 & 25 & 98 & 72 & 10 & 56 & 07  \\
+\hline
+  59 & 30 & 22 & 14 & 97 & 61 & 08 & 45 & 73 & 86  \\
+\hline
+  28 & 11 & 03 & 96 & 50 & 87 & 34 & 62 & 49 & 75  \\
+\hline
+  00 & 82 & 95 & 48 & 76 & 23 & 51 & 39 & 17 & 64  \\
+\hline
+\end{tabular}
+
+{\bf Zadanie:}
+
+Proszę podać definicję kwadratu grecko-łacińskiego i podać
+jego przykład dla $n=5$.
+
+Euler conjectured that there do not exist Euler squares of order n=4k+2 for k=1, 2, .... In fact, MacNeish (1921-1922) published a purported proof of this conjecture (Bruck and Ryser 1949). While it is true that no such square of order six exists, such squares were found to exist for all other orders of the form 4k+2 by Bose, Shrikhande, and Parker in 1959 (Wells 1986, p. 77), refuting the conjecture (and establishing unequivocally the invalidity of MacNeish's "proof")
+
+
+
 \end{document}
