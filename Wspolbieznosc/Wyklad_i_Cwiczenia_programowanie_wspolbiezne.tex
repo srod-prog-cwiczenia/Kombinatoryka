@@ -104,11 +104,15 @@ Programowanie współbieżne w teorii i praktyce}
 
   \begin{itemize}
   \item<1->
+    POCZATEK:
     Znajdujemy proces o numerze i taki że Koniec[i] == False
     oraz Potrzebne[i] <= Robocze[i]. Jeśli istnieje to przejdz niżej.
     Jeśli nie istnieje to skocz do KONIEC:
   \item<2->
-    
+    Jeśli istnieje to:
+    Robocze[i] += Pobrane[i];\\
+    Koniec[i] = True
+    skocz do POCZATEK:
   \item<3->
     KONIEC: if Koniec są wszystkie (True) to system jest w stanie
     bezpiecznym. Jeśli nie to proces który ma Koniec False
